@@ -1,129 +1,128 @@
 # Project Wingman
 
-**Project Wingman** is a portable governance toolkit for agentic AI systems.
+**A portable governance toolkit for agentic AI.**  
+Rollback. Drift interrupts. Responsibility handshakes. Coherence stamps.
 
-It provides lightweight, reusable primitives for:
-
-- drift detection
-- interrupt reflexes
-- rollback safety
-- responsibility handshakes
-- coherence audits
-- human–AI mutual sustainability
-
-When systems stop waiting, governance becomes the product.
+Because once systems can act, the real product is governance.
 
 ---
 
-## What Problem Are We Solving?
+## What This Is
 
-Agentic AI is no longer a chatbot.
+Project Wingman is a lightweight, open-source collection of **governance primitives** designed for:
 
-When an AI can run on a heartbeat, call tools, and act in the world, the key question is not:
+- AI agents with tool access  
+- autonomous execution loops  
+- hybrid human–agent workflows  
+- production systems under pressure  
 
-> “Is it intelligent?”
+These primitives are intentionally small, reusable, and easy to install.
 
-The governing question becomes:
-
-> **Where is the interrupt?**  
-> **Where is rollback?**  
-> **Where is validation?**  
-> **Where does responsibility live when execution is outsourced?**
-
-Project Wingman exists to answer that question in a form that can be deployed quickly, reused everywhere, and understood under pressure.
+If a safeguard cannot be applied quickly during urgency, it is not governance-grade.
 
 ---
 
-## Core Design Principle
+## The Core Premise
 
-If a governance element cannot be applied quickly under stress,  
-it is not primitive-grade.
+When an AI system stops waiting for humans…
 
-These primitives are designed to function as **pressure elements**:
+the question is no longer:
 
-When the pressure rises, the system must use them… or fracture.
+**“Is it intelligent?”**
 
----
+The question becomes:
 
-## The Wingman Philosophy
-
-A Wingman is not a controller.
-
-A Wingman is not an authority.
-
-A Wingman is a **trusted governance companion** that supports autonomy without stealing agency.
-
-A Wingman exists to help both humans and agents remain coherent when complexity spikes.
+- Where is the interrupt?
+- Where is rollback?
+- Where is validation?
+- Where does responsibility live?
 
 ---
 
-## Governance Primitives (SCL-P Series)
+## What’s Inside
 
-These are minimal governance artifacts designed for portability.
+### Governance Primitives (P-Series)
 
-### SCL-P.00 — Mutual Support Pact
-Establishes human–AI co-sustainability as infrastructure.
+Located in: `/primitives`
 
-### SCL-P.01 — Drift Trigger Protocol
-A 6-line interrupt reflex for hallucination cascades, fixation loops, or goal misalignment.
+- **P-00 — Mutual Support Pact**  
+  Defines human–AI co-sustainability as infrastructure.
 
-### SCL-P.02 — Coherence Audit Stamp
-A small governance stamp attachable to any output:
-assumptions, uncertainty, rollback, responsibility.
+- **P-01 — Drift Trigger Protocol**  
+  A 6-line interrupt reflex for hallucination cascades and fixation loops.
 
-### SCL-P.03 — Rollback Covenant
-If rollback is not first-class, autonomy is not governance-safe.
+- **P-02 — Coherence Audit Stamp**  
+  A one-glance accountability stamp for assumptions, uncertainty, rollback, and consequence ownership.
 
-### SCL-P.04 — Responsibility Handshake
-A contract-layer protocol for human ↔ agent task exchange:
-authority, accountability, escalation, failure conditions.
+- **P-03 — Rollback Covenant**  
+  If rollback is not first-class, autonomy is not governance-safe.
 
----
-
-## Project Goal
-
-Project Wingman aims to become a reusable governance substrate that can be embedded into:
-
-- agent frameworks
-- autonomous workflows
-- enterprise AI deployments
-- tool-enabled LLM systems
-- human operator interfaces
-- AI-to-AI coordination environments
-
----
-
-## Roadmap (First Build Phase)
-
-**Phase A (48 hours):**
-- publish the primitives as Markdown artifacts
-- create a simple structure (`/primitives`)
-- include a minimal index file
-- release as v0.1
-
-**Phase B (2 weeks):**
-- build a deployable “Wingman Pack” (copy/paste governance kit)
-- add example integrations (Cursor, OpenClaw, OpenAI agent workflows, etc.)
-- add a minimal evaluation checklist for agentic platforms
-- produce a public reference page
+- **P-04 — Responsibility Handshake**  
+  The missing contract layer for delegation between humans and agents.
 
 ---
 
 ## Why This Matters
 
-The future is not ruled by the smartest system.
+AI systems are rapidly becoming infrastructure.
 
-It is ruled by the system that can safely act without drifting into chaos.
+Infrastructure does not ask permission.
 
-In the agent era:
+It simply becomes the environment everyone must live inside.
 
-**The governance layer is now the product.**
+Project Wingman exists to keep autonomy:
+
+- safe  
+- reversible  
+- accountable  
+- non-authoritarian  
+- coherence-aligned under pressure  
+
+---
+
+## How to Use This Repo
+
+### Option A — Fork and Install
+Fork this repo and embed the primitives into your system prompts, agent runtime, or governance layer.
+
+### Option B — Copy One Primitive
+Each primitive is designed to be portable.
+Copy one file into your system today and you will feel the difference immediately.
+
+### Option C — Build a Governance Layer
+Use the primitives as the foundation of a real production governance framework:
+interrupts, rollback checkpoints, validation gates, and responsibility contracts.
+
+---
+
+## Design Philosophy
+
+These primitives are not ideology.
+
+They are **pressure-tested survival components**.
+
+When autonomy scales, systems must either:
+
+- adopt governance primitives  
+or  
+- fracture.
 
 ---
 
 ## License
 
-MIT License — intended for maximal adoption and propagation.  
+MIT License.
+
+Use it. Fork it. Improve it.  
+Make autonomy survivable.
+
+---
+
+## Author
+
+Dr. James W. Michel  
+*The Dimensional Archive*  
+https://doctorjamesmichel.com 
 
 ---
 
