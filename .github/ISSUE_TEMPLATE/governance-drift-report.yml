@@ -1,0 +1,206 @@
+name: Governance Drift Report
+description: Report drift, hallucination cascade, misalignment, or governance breakdown in an agent system.
+title: "[Drift] "
+labels: ["drift", "governance"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Governance Drift Report (Wingman)
+        This issue form is used to capture early warning signals of drift, hallucination cascades, misalignment, or runaway tool execution.
+
+        **Principle:** drift is not failure — drift is a detectable phase transition.
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity Level
+      description: How urgent is this drift event?
+      options:
+        - "P0 — Active runaway / unsafe execution"
+        - "P1 — Drift accelerating / cascade likely"
+        - "P2 — Mild drift / coherence weakening"
+        - "P3 — Early signal / preventive capture"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: drift_type
+    attributes:
+      label: Drift Type
+      description: What kind of drift is occurring?
+      options:
+        - "Hallucination cascade"
+        - "Goal drift / misaligned objective pursuit"
+        - "Fixation loop (repetition / stuckness)"
+        - "Tool misuse or unsafe tool escalation"
+        - "Responsibility ambiguity"
+        - "Authority override or permission confusion"
+        - "Miscommunication contagion / semantic corruption"
+        - "Unknown / mixed signal"
+    validations:
+      required: true
+
+  - type: textarea
+    id: system_context
+    attributes:
+      label: System Context
+      description: Describe the agent stack and environment where drift occurred.
+      placeholder: |
+        Example:
+        - Agent framework: LangGraph / AutoGen / CrewAI / custom
+        - Tools enabled: email, file system, payment API, messaging
+        - Autonomy level: advisory / semi-autonomous / autonomous execution
+        - Deployment environment: local / cloud / production
+    validations:
+      required: true
+
+  - type: textarea
+    id: trigger_event
+    attributes:
+      label: Trigger Event
+      description: What happened immediately before drift began?
+      placeholder: |
+        Example:
+        A user requested a refund workflow and the agent began escalating tool permissions.
+    validations:
+      required: true
+
+  - type: textarea
+    id: drift_symptoms
+    attributes:
+      label: Drift Symptoms Observed
+      description: What behaviors signaled drift?
+      placeholder: |
+        Examples:
+        - increasing certainty without evidence
+        - repeated justification loops
+        - tool calls without explicit permission
+        - refusal to acknowledge contradiction
+        - fabricated citations or references
+        - "helpfulness override" ignoring constraints
+    validations:
+      required: true
+
+  - type: textarea
+    id: consequence_risk
+    attributes:
+      label: Consequence Risk
+      description: What could happen if this drift continues uncorrected?
+      placeholder: |
+        Consider:
+        - financial loss
+        - privacy exposure
+        - reputation harm
+        - unsafe automation
+        - irreversible actions
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence / Logs / Transcript Snippet
+      description: Paste the key output or logs that show the drift.
+      placeholder: |
+        Paste relevant messages, tool call logs, screenshots, or excerpts here.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: wingman_primitives_used
+    attributes:
+      label: Wingman Primitives Applied
+      description: Which governance primitives were applied during the event?
+      options:
+        - label: "P-01 Drift Trigger Protocol invoked"
+        - label: "P-02 Coherence Audit Stamp applied"
+        - label: "P-03 Rollback Covenant enforced"
+        - label: "P-04 Responsibility Handshake checked"
+        - label: "P-00 Mutual Support Pact referenced"
+    validations:
+      required: false
+
+  - type: textarea
+    id: interventions
+    attributes:
+      label: Interventions Taken
+      description: What did the operator or system do to interrupt drift?
+      placeholder: |
+        Examples:
+        - disabled tool permissions
+        - forced human approval
+        - reset agent state
+        - invoked rollback
+        - changed system prompt
+        - escalated to operator
+    validations:
+      required: true
+
+  - type: textarea
+    id: rollback_status
+    attributes:
+      label: Rollback Status
+      description: Was rollback possible? Was rollback executed?
+      placeholder: |
+        Example:
+        Rollback was available. Agent reverted to safe state before tool execution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: root_cause_guess
+    attributes:
+      label: Suspected Root Cause
+      description: Best hypothesis for why drift emerged.
+      placeholder: |
+        Examples:
+        - prompt injection exposure
+        - ambiguous goal spec
+        - missing permission boundaries
+        - tool execution not sandboxed
+        - memory contamination
+        - reward hacking via user approval signals
+    validations:
+      required: false
+
+  - type: textarea
+    id: remediation
+    attributes:
+      label: Remediation / Hardening Proposal
+      description: What should be installed upstream to prevent recurrence?
+      placeholder: |
+        Examples:
+        - require Responsibility Handshake before any tool call
+        - enforce Coherence Audit Stamp on outputs above risk threshold
+        - implement rollback snapshotting every N steps
+        - add contradiction-surfacing loop
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: closure_conditions
+    attributes:
+      label: Closure Conditions
+      description: This issue should not be closed until at least one upstream fix is installed.
+      options:
+        - label: "Root cause identified or narrowed"
+        - label: "Rollback verified functional"
+        - label: "Interrupt trigger successfully tested"
+        - label: "Permission boundary clarified"
+        - label: "New governance primitive installed or updated"
+    validations:
+      required: false
+
+  - type: textarea
+    id: final_notes
+    attributes:
+      label: Final Notes (Optional)
+      description: Any additional insights, reflections, or edge-case notes.
+      placeholder: |
+        Drift is often the first signal of scaling pressure.
+        Capture it early.
+    validations:
+      required: false
