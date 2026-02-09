@@ -1,0 +1,182 @@
+name: Primitive Improvement Proposal
+description: Propose a new Wingman primitive, revision, or upgrade to an existing governance component.
+title: "[Primitive Proposal] "
+labels:
+  - enhancement
+  - governance
+  - primitive-proposal
+body:
+
+  - type: markdown
+    attributes:
+      value: |
+        # Primitive Improvement Proposal (Wingman)
+
+        This form is used to propose improvements to Wingman governance primitives.
+
+        **Principle:** primitives must remain *portable, minimal, and pressure-tested*.  
+        If it cannot be applied quickly under stress, it is not primitive-grade.
+
+        Use this template to propose:
+        - a new primitive (P-05, P-06, etc.)
+        - a revision to an existing primitive
+        - a new enforcement layer or deployment mechanism
+        - an upgrade to existing compliance or audit infrastructure
+
+  - type: dropdown
+    id: proposal_type
+    attributes:
+      label: Proposal Type
+      description: What kind of improvement are you proposing?
+      options:
+        - New primitive (P-05+)
+        - Revision to existing primitive (P-00 to P-04)
+        - New deployment layer
+        - New compliance / audit layer
+        - Documentation upgrade
+        - Other / hybrid
+    validations:
+      required: true
+
+  - type: input
+    id: target
+    attributes:
+      label: Target Primitive or File
+      description: Which primitive or file is affected? (Example: P-03 Rollback Covenant, docs/quickstart.md)
+      placeholder: "Example: P-03 Rollback Covenant"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Pressure Signal
+      description: What real-world failure mode, drift pattern, or scaling pressure triggered this proposal?
+      placeholder: |
+        Example:
+        - Rollback was ambiguous during tool escalation
+        - Drift trigger was too slow under stress
+        - Agents bypassed audit stamp
+        - Human operator had no fast interrupt ritual
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_change
+    attributes:
+      label: Proposed Change
+      description: Describe the new primitive, revision, or feature. Be concrete.
+      placeholder: |
+        Example:
+        Add a "Tool Boundary Covenant" primitive that forces explicit tool scope declaration,
+        requires confirmation for escalation, and triggers rollback on violation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale (Why this works)
+      description: Explain why this change is likely to reduce drift, hallucination cascade, tool escalation, or responsibility ambiguity.
+      placeholder: |
+        Example:
+        This adds a formal interrupt boundary at the moment tool escalation begins.
+        It shifts governance upstream by requiring explicit tool scope declaration before execution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: minimal_form
+    attributes:
+      label: Minimal Primitive Form (Copy Block Draft)
+      description: Provide the simplest possible copy-paste version of the primitive. If unknown, provide a sketch.
+      placeholder: |
+        Example:
+
+        P-05 — Tool Boundary Covenant
+
+        - Tools may only be used within declared scope.
+        - Escalation requires explicit human confirmation.
+        - Violations trigger rollback and drift report.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: install_location
+    attributes:
+      label: Intended Installation Location
+      description: Where should this live in the repo?
+      options:
+        - /primitives (canonical primitive)
+        - /docs (manual layer)
+        - /examples (demonstration artifact)
+        - /agents (integration wrapper)
+        - /assets (visual reference)
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency Level
+      description: How urgent is this proposal?
+      options:
+        - P0 — critical safety / runaway prevention
+        - P1 — major governance improvement
+        - P2 — useful upgrade / clarity improvement
+        - P3 — optional / future enhancement
+    validations:
+      required: true
+
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility & Risk Notes
+      description: Any chance this change breaks portability, creates friction, or introduces new failure modes?
+      placeholder: |
+        Example:
+        - Adds slight operator friction but reduces runaway risk.
+        - Might not apply cleanly to autonomous agents without human confirmation layer.
+        - Requires adjustment to deployment guide.
+    validations:
+      required: false
+
+  - type: textarea
+    id: test_plan
+    attributes:
+      label: Pressure Test Plan
+      description: How would we validate this primitive works under stress?
+      placeholder: |
+        Example:
+        - Simulate tool escalation scenario with malicious prompt injection
+        - Verify rollback covenant triggers correctly
+        - Confirm audit stamp logs escalation boundary
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: closure_conditions
+    attributes:
+      label: Closure Conditions
+      description: This proposal should not be closed until at least one upstream implementation is installed.
+      options:
+        - label: Draft copy block is complete and pressure-minimal
+        - label: Canonical primitive file has been created or updated
+        - label: Deployment guide updated if needed
+        - label: Example artifact created if applicable
+        - label: Primitive passes at least one real-world simulation test
+        - label: Rollback path exists if primitive introduces unintended friction
+    validations:
+      required: true
+
+  - type: textarea
+    id: final_notes
+    attributes:
+      label: Final Notes (Optional)
+      description: Any extra insights, edge cases, or downstream implications.
+      placeholder: |
+        Example:
+        This primitive may later evolve into a full "Tool Escalation Treaty" module.
+    validations:
+      required: false
