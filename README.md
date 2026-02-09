@@ -19,6 +19,35 @@ Wingman exists because autonomous execution without governance is not automation
 
 ---
 
+## Fork & Install in 5 Minutes
+
+If you want Wingman running inside an agent stack immediately:
+
+### 1) Fork this repo
+(Or copy the primitives directly into your own project.)
+
+### 2) Install the primitives upstream
+Start with the canonical set:
+
+→ [`/primitives/INDEX.md`](./primitives/INDEX.md)
+
+### 3) Add Wingman to your agent wrapper
+Minimum install requires:
+
+- **P-01 Drift Trigger Protocol**
+- **P-03 Rollback Covenant**
+- **P-04 Responsibility Handshake**
+
+### 4) Use the Deployment Guide
+→ [`/docs/DEPLOYMENT-GUIDE.md`](./docs/DEPLOYMENT-GUIDE.md)
+
+### 5) Validate with examples
+→ [`/examples/README.md`](./examples/README.md)
+
+If your agent stack has tools, memory, or autonomous execution loops, **this installation is not optional**.
+
+---
+
 ## What Wingman Is
 
 Wingman is a set of **pressure-tested governance primitives** designed to reduce:
