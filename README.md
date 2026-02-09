@@ -136,6 +136,8 @@ Wingman is intentionally designed to be:
 - deployable under stress
 - audit-readable
 
+**If your agent can act, governance is no longer optional.**
+
 ---
 
 ## What You Get
