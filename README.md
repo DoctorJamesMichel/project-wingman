@@ -117,22 +117,24 @@ Start here:
 
 ## What Wingman Is
 
-Wingman is a set of **pressure-tested governance primitives** designed to reduce:
+Wingman is a **portable governance layer** for tool-using AI systems.
 
-- hallucination cascades  
-- runaway tool execution  
-- goal drift and fixation loops  
-- responsibility ambiguity  
-- silent failure accumulation  
-- misaligned autonomy escalation  
+It is a set of **pressure-tested governance primitives** designed to prevent:
+
+- hallucination cascades that survive into execution
+- runaway tool calls and irreversible actions
+- goal drift and fixation loops
+- responsibility ambiguity between human and agent
+- silent failure accumulation
+- misaligned autonomy escalation
 
 Wingman is intentionally designed to be:
 
-- lightweight  
-- copy-pastable  
-- stack-agnostic  
-- deployable under stress  
-- audit-readable  
+- lightweight
+- copy-pastable
+- stack-agnostic
+- deployable under stress
+- audit-readable
 
 ---
 
