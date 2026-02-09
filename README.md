@@ -1,128 +1,159 @@
-# Project Wingman
+# Project Wingman  
+### A portable governance layer for agentic AI systems
 
-**A portable governance toolkit for agentic AI.**  
-Rollback. Drift interrupts. Responsibility handshakes. Coherence stamps.
+**Project Wingman is not an agent framework.**  
+It is a **minimal governance toolkit** designed to be installed into *any* agent stack.
 
-Because once systems can act, the real product is governance.
+If your system can act, the question is no longer:
 
----
+> “Is it smart?”
 
-## What This Is
+The governing question becomes:
 
-Project Wingman is a lightweight, open-source collection of **governance primitives** designed for:
+> Where is the interrupt?  
+> Where is rollback?  
+> Where is validation?  
+> Where does responsibility live?
 
-- AI agents with tool access  
-- autonomous execution loops  
-- hybrid human–agent workflows  
-- production systems under pressure  
-
-These primitives are intentionally small, reusable, and easy to install.
-
-If a safeguard cannot be applied quickly during urgency, it is not governance-grade.
+Wingman exists because autonomous execution without governance is not automation — it is drift.
 
 ---
 
-## The Core Premise
+## What Wingman Is
 
-When an AI system stops waiting for humans…
+Wingman is a set of **pressure-tested governance primitives** designed to reduce:
 
-the question is no longer:
+- hallucination cascades  
+- runaway tool execution  
+- goal drift and fixation loops  
+- responsibility ambiguity  
+- silent failure accumulation  
+- misaligned autonomy escalation  
 
-**“Is it intelligent?”**
+Wingman is intentionally designed to be:
 
-The question becomes:
-
-- Where is the interrupt?
-- Where is rollback?
-- Where is validation?
-- Where does responsibility live?
+- lightweight  
+- copy-pastable  
+- stack-agnostic  
+- deployable under stress  
+- audit-readable  
 
 ---
 
-## What’s Inside
+## What You Get
 
-### Governance Primitives (P-Series)
+Wingman includes three layers:
 
-Located in: `/primitives`
+### 1) Governance Primitives (The Toolkit)
+Canonical, copyable primitives designed for use under pressure.
+
+📁 `/primitives/`  
+→ [`/primitives/README.md`](./primitives/README.md)
+
+---
+
+### 2) Implementation Spores (Examples)
+Real usage examples showing how to embed Wingman into agent workflows.
+
+📁 `/examples/`  
+→ [`/examples/README.md`](./examples/README.md)
+
+---
+
+### 3) Field Guide Documentation
+Deployment instructions, compliance framing, and install logic.
+
+📁 `/docs/`  
+→ [`/docs/README.md`](./docs/README.md)
+
+---
+
+## Fastest Way to Start
+
+If you want to deploy Wingman immediately:
+
+### Step 1 — Read the Quick Start  
+→ [`/docs/quickstart.md`](./docs/quickstart.md)
+
+### Step 2 — Install the Deployment Guide  
+→ [`/docs/DEPLOYMENT-GUIDE.md`](./docs/DEPLOYMENT-GUIDE.md)
+
+### Step 3 — Copy the Canonical Primitive Set  
+→ [`/primitives/INDEX.md`](./primitives/INDEX.md)
+
+---
+
+## Canonical Primitive Set (P-Series)
+
+These primitives are designed to be copied independently or installed as a bundle.
 
 - **P-00 — Mutual Support Pact**  
-  Defines human–AI co-sustainability as infrastructure.
-
 - **P-01 — Drift Trigger Protocol**  
-  A 6-line interrupt reflex for hallucination cascades and fixation loops.
-
 - **P-02 — Coherence Audit Stamp**  
-  A one-glance accountability stamp for assumptions, uncertainty, rollback, and consequence ownership.
-
 - **P-03 — Rollback Covenant**  
-  If rollback is not first-class, autonomy is not governance-safe.
+- **P-04 — Responsibility Handshake**
 
-- **P-04 — Responsibility Handshake**  
-  The missing contract layer for delegation between humans and agents.
-
----
-
-## Why This Matters
-
-AI systems are rapidly becoming infrastructure.
-
-Infrastructure does not ask permission.
-
-It simply becomes the environment everyone must live inside.
-
-Project Wingman exists to keep autonomy:
-
-- safe  
-- reversible  
-- accountable  
-- non-authoritarian  
-- coherence-aligned under pressure  
+→ Canonical list: [`/primitives/INDEX.md`](./primitives/INDEX.md)
 
 ---
 
-## How to Use This Repo
+## Deployment Principle
 
-### Option A — Fork and Install
-Fork this repo and embed the primitives into your system prompts, agent runtime, or governance layer.
+Governance must be installed **upstream**.
 
-### Option B — Copy One Primitive
-Each primitive is designed to be portable.
-Copy one file into your system today and you will feel the difference immediately.
+If governance is only applied *after output*, it is already too late.
 
-### Option C — Build a Governance Layer
-Use the primitives as the foundation of a real production governance framework:
-interrupts, rollback checkpoints, validation gates, and responsibility contracts.
+Wingman is meant to sit inside:
+
+- agent wrappers  
+- tool routers  
+- task planners  
+- execution loops  
+- memory write paths  
+- chain-of-thought compression layers  
+- escalation and approval gates  
 
 ---
 
-## Design Philosophy
+## What Wingman Does *Not* Claim
 
-These primitives are not ideology.
+Wingman does not claim to:
 
-They are **pressure-tested survival components**.
+- eliminate hallucinations  
+- guarantee safe autonomy  
+- replace human accountability  
+- solve alignment  
+- prevent misuse by malicious operators  
 
-When autonomy scales, systems must either:
+Wingman is a governance layer — not a moral layer.
 
-- adopt governance primitives  
-or  
-- fracture.
+It provides structure, interrupts, rollback, and accountability scaffolding.
+
+---
+
+## Why This Exists
+
+Autonomous systems fail differently than software.
+
+They do not merely crash.
+
+They drift.
+
+Wingman is designed to make drift visible early, recoverable quickly, and accountable by default.
 
 ---
 
 ## License
 
-MIT License.
-
-Use it. Fork it. Improve it.  
-Make autonomy survivable.
+See [`LICENSE`](./LICENSE)
 
 ---
 
-## Author
+## One-Line Summary
 
-Dr. James W. Michel  
-*The Dimensional Archive*  
-https://doctorjamesmichel.com 
+**Project Wingman is a portable governance layer for agentic AI systems.**
+
+If your system can act, Wingman becomes mandatory.  
 
 ---
 
