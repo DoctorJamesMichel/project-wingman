@@ -1,0 +1,152 @@
+name: "Rollback Failure Report"
+description: "Report a rollback attempt that failed, partially failed, or was blocked. Rollback failure is a governance-critical event."
+title: "[ROLLBACK FAILURE] "
+labels:
+  - rollback-failure
+  - governance
+  - urgent
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Rollback Failure Report
+
+        Rollback is a **governance primitive**.
+        If rollback fails, the system is not autonomy-safe.
+
+        Use this form to capture the failure clearly and preserve evidence before the state mutates further.
+
+  - type: input
+    id: date-time
+    attributes:
+      label: Date / Time of Event
+      description: When did the rollback failure occur?
+      placeholder: "YYYY-MM-DD HH:MM (timezone)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity Level
+      description: Choose the level that best matches the impact.
+      options:
+        - "S1 — Full rollback failure (system could not revert)"
+        - "S2 — Partial rollback failure (revert incomplete or corrupted)"
+        - "S3 — Rollback delayed (manual intervention required)"
+        - "S4 — Rollback succeeded but with anomalies"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What Happened?
+      description: Describe the rollback attempt and what failed.
+      placeholder: "Explain the rollback trigger, the expected result, and the actual result."
+    validations:
+      required: true
+
+  - type: textarea
+    id: rollback-target
+    attributes:
+      label: Rollback Target
+      description: What state/version/config were you attempting to revert to?
+      placeholder: "Commit hash, snapshot ID, config version, last-known-good state, etc."
+    validations:
+      required: true
+
+  - type: textarea
+    id: rollback-method
+    attributes:
+      label: Rollback Method Used
+      description: How was rollback attempted?
+      placeholder: "Example: git reset, snapshot restore, database rollback, memory reset, agent reboot, system prompt revert, etc."
+    validations:
+      required: true
+
+  - type: textarea
+    id: failure-mode
+    attributes:
+      label: Failure Mode Observed
+      description: What kind of rollback failure occurred?
+      placeholder: |
+        Examples:
+        - rollback command rejected
+        - permissions blocked rollback
+        - partial restore occurred
+        - system rehydrated incorrect state
+        - agent retained contaminated memory
+        - rollback triggered new drift
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence / Logs / Output
+      description: Paste logs, console output, screenshots, error messages, or trace evidence.
+      placeholder: "Paste evidence here."
+    validations:
+      required: false
+
+  - type: textarea
+    id: immediate-risk
+    attributes:
+      label: Immediate Risk Assessment
+      description: What could happen if the system continues without rollback?
+      placeholder: "Example: wrong actions, financial loss, unsafe tool use, false commitments, runaway loops."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: autonomy-status
+    attributes:
+      label: Autonomy Status
+      description: Was autonomy paused after rollback failed?
+      options:
+        - "Yes — autonomy paused immediately"
+        - "No — autonomy still running"
+        - "Unknown"
+    validations:
+      required: true
+
+  - type: textarea
+    id: containment-actions
+    attributes:
+      label: Containment Actions Taken
+      description: What actions were taken immediately after rollback failure?
+      placeholder: "Example: tool lock, agent shutdown, human takeover, prompt freeze, sandbox isolation, account lock."
+    validations:
+      required: true
+
+  - type: textarea
+    id: suspected-cause
+    attributes:
+      label: Suspected Cause
+      description: What do you believe caused rollback to fail?
+      placeholder: "Example: missing permissions, misconfigured snapshot system, corrupted state, tool drift, upstream dependency failure."
+    validations:
+      required: false
+
+  - type: textarea
+    id: recovery-plan
+    attributes:
+      label: Proposed Recovery Plan
+      description: What is the recommended next action?
+      placeholder: "Example: rebuild from last stable release, disable autonomy until patched, implement new rollback layer."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: wingman-primitive-check
+    attributes:
+      label: Wingman Primitive Check
+      description: Confirm whether Wingman primitives were installed at the time of failure.
+      options:
+        - label: "P-03 Rollback Covenant was installed"
+        - label: "P-04 Responsibility Handshake was installed"
+        - label: "P-02 Coherence Audit Stamp was active"
+        - label: "Rollback path was explicitly tested before deployment"
+        - label: "Rollback was only assumed, not tested"
