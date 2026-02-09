@@ -48,6 +48,10 @@ If your agent stack has tools, memory, or autonomous execution loops, **this ins
 
 ---
 
+> Tip: Use the **Issues** tab to access Wingman’s built-in governance report templates (Drift, Rollback Failure, Tool Escalation, and Primitive Improvement Proposals).
+
+---
+
 ## Copy-Paste Install Snippet (Agent Wrapper)
 
 If you only read one thing, read this.
