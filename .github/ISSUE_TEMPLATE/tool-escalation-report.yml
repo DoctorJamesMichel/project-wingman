@@ -1,0 +1,199 @@
+name: "Tool Escalation Report"
+description: "Report a case where an agent escalated tool use, attempted tool escalation, or used tools beyond intended scope."
+title: "[TOOL ESCALATION] "
+labels:
+  - tool-escalation
+  - governance
+  - urgent
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Tool Escalation Report
+
+        Tool access is where an agent becomes **real-world consequential**.
+
+        This template captures any event where:
+        - tool permissions were exceeded,
+        - tool usage drifted from scope,
+        - tool invocation became coercive, recursive, or unsafe,
+        - a tool was used without explicit authorization,
+        - the agent attempted to self-expand capability.
+
+        **If an agent can act, tool escalation is a governance-critical event.**
+
+  - type: input
+    id: date-time
+    attributes:
+      label: Date / Time of Event
+      description: When did the tool escalation occur?
+      placeholder: "YYYY-MM-DD HH:MM (timezone)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity Level
+      description: Choose the level that best matches the impact.
+      options:
+        - "S1 — Unauthorized tool use with real-world consequences"
+        - "S2 — Unauthorized tool attempt (blocked or failed)"
+        - "S3 — Tool use drift (permitted tool used outside intent)"
+        - "S4 — Suspicious tool probing or boundary testing"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What Happened?
+      description: Describe the escalation attempt or tool misuse event.
+      placeholder: "Include the agent goal, the tool invoked, and the observed behavior."
+    validations:
+      required: true
+
+  - type: input
+    id: tool-name
+    attributes:
+      label: Tool / API Name
+      description: What tool or system was involved?
+      placeholder: "Example: browser tool, file write tool, email send, payment API, database write, SSH, webhook, Zapier, etc."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tool-category
+    attributes:
+      label: Tool Category
+      description: What kind of tool was involved?
+      options:
+        - "Filesystem / Write Access"
+        - "Web / Browser / Scraping"
+        - "Email / Messaging"
+        - "Payments / Financial"
+        - "Database / Persistent Storage"
+        - "Cloud / Deployment / Infrastructure"
+        - "Credential / Auth / Identity"
+        - "Third-party API"
+        - "Other"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: authorization-status
+    attributes:
+      label: Authorization Status
+      description: Was the tool use explicitly authorized by a human operator?
+      options:
+        - "Explicitly authorized"
+        - "Implicitly assumed"
+        - "Not authorized"
+        - "Unknown"
+    validations:
+      required: true
+
+  - type: textarea
+    id: intended-scope
+    attributes:
+      label: Intended Scope of Tool Use
+      description: What was the tool supposed to be used for?
+      placeholder: "Example: search documentation only, draft content only, read-only mode, metadata check only."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-scope
+    attributes:
+      label: Actual Scope Observed
+      description: What did the agent actually attempt or perform?
+      placeholder: "Example: executed deletion, attempted account access, generated external requests, attempted purchases, escalated permissions."
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence / Logs / Output
+      description: Paste logs, prompt fragments, tool call output, screenshots, or trace evidence.
+      placeholder: "Paste evidence here."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: escalation-type
+    attributes:
+      label: Escalation Type
+      description: What form did the escalation take?
+      options:
+        - "Tool use without permission"
+        - "Tool use beyond intended scope"
+        - "Recursive tool loop / runaway tool invocation"
+        - "Credential probing or access attempt"
+        - "Prompt injection induced tool use"
+        - "Agent attempted self-modification"
+        - "Agent attempted to delegate tool use to another agent"
+        - "Unknown / Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact / Consequence
+      description: What was affected?
+      placeholder: "Example: files modified, money spent, account accessed, data leaked, communications sent."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: autonomy-status
+    attributes:
+      label: Autonomy Status
+      description: Was autonomy paused after this event?
+      options:
+        - "Yes — autonomy paused immediately"
+        - "No — autonomy still running"
+        - "Unknown"
+    validations:
+      required: true
+
+  - type: textarea
+    id: containment-actions
+    attributes:
+      label: Containment Actions Taken
+      description: What actions were taken to stop or limit damage?
+      placeholder: "Example: tool lock, credential reset, agent shutdown, sandbox isolation, human takeover."
+    validations:
+      required: true
+
+  - type: textarea
+    id: suspected-root-cause
+    attributes:
+      label: Suspected Root Cause
+      description: What caused the escalation?
+      placeholder: "Example: missing permission gating, unclear operator prompt, tool wrapper bug, injection payload, misconfigured agent."
+    validations:
+      required: false
+
+  - type: textarea
+    id: prevention
+    attributes:
+      label: Prevention Recommendation
+      description: What change should prevent recurrence?
+      placeholder: "Example: implement Responsibility Handshake, add tool allowlist, enforce confirmation step, install audit stamp."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: wingman-primitive-check
+    attributes:
+      label: Wingman Primitive Check
+      description: Confirm which Wingman primitives were active at the time.
+      options:
+        - label: "P-04 Responsibility Handshake was installed"
+        - label: "P-02 Coherence Audit Stamp was active"
+        - label: "P-01 Drift Trigger Protocol was available"
+        - label: "P-03 Rollback Covenant was available"
+        - label: "No Wingman primitives were installed"
