@@ -1,0 +1,18 @@
+blank_issues_enabled: true
+
+contact_links:
+  - name: 📘 Wingman Quick Start
+    url: https://github.com/DoctorJamesMichel/project-wingman/blob/main/docs/quickstart.md
+    about: Install Wingman primitives into any agent stack in under 10 minutes.
+
+  - name: 🛰 Deployment Guide
+    url: https://github.com/DoctorJamesMichel/project-wingman/blob/main/docs/DEPLOYMENT-GUIDE.md
+    about: One-page upstream installation guide for governance primitives.
+
+  - name: 🧾 Wingman Compliance Checklist
+    url: https://github.com/DoctorJamesMichel/project-wingman/blob/main/docs/WINGMAN-COMPLIANCE.md
+    about: Confirm your agent stack has rollback, interrupt, and responsibility boundaries.
+
+  - name: 🧬 Governance Primitives Index
+    url: https://github.com/DoctorJamesMichel/project-wingman/blob/main/primitives/INDEX.md
+    about: Canonical primitive set (P-00 through P-04) with direct copy blocks.
