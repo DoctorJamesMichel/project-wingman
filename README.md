@@ -87,6 +87,34 @@ function WINGMAN_AGENT_LOOP(user_request):
 
 ---
 
+## If You Don’t Have Rollback, You Don’t Have Autonomy
+
+Most agent stacks treat rollback as an afterthought.
+
+That is a category error.
+
+**Autonomy without rollback is not capability. It is liability.**
+
+If your system can:  
+- send messages,  
+- move money,  
+- modify records,  
+- commit code,  
+- schedule actions,  
+- call APIs,  
+- or persist memory…  
+
+…then rollback is not a “nice feature.”  
+
+It is the **minimum condition for governability**.  
+
+Start here:  
+
+→ **P-03 — The Rollback Covenant**  
+[`/primitives/P-03-rollback-covenant.md`](./primitives/P-03-rollback-covenant.md)  
+
+---
+
 ## What Wingman Is
 
 Wingman is a set of **pressure-tested governance primitives** designed to reduce:
