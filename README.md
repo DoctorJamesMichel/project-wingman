@@ -48,6 +48,45 @@ If your agent stack has tools, memory, or autonomous execution loops, **this ins
 
 ---
 
+## Copy-Paste Install Snippet (Agent Wrapper)
+
+If you only read one thing, read this.
+
+Wingman installs as an **upstream governance layer**:  
+a lightweight control loop that runs *before* your agent acts.
+
+```pseudo
+function WINGMAN_AGENT_LOOP(user_request):
+
+    // 0) Responsibility Handshake (P-04)
+    // Establish: authority, scope, escalation, abort conditions.
+    contract = RESPONSIBILITY_HANDSHAKE(user_request)
+
+    // 1) Drift Trigger Protocol (P-01)
+    // Quick interrupt reflex: hallucination cascades, fixation loops, goal misalignment.
+    if DRIFT_TRIGGER(contract, user_request):
+        return "Paused. Drift detected. Re-anchor intent before proceeding."
+
+    // 2) Execute task (your agent stack lives here)
+    output = AGENT_EXECUTE(user_request, contract)
+
+    // 3) Coherence Audit Stamp (P-02)
+    // Validate output: alignment, clarity, failure modes, confidence, risk surface.
+    audit = COHERENCE_AUDIT_STAMP(output, contract)
+
+    // 4) Rollback Covenant (P-03)
+    // If audit fails, rollback is first-class.
+    if audit.status == "FAIL" or audit.status == "UNSTABLE":
+        rollback = ROLLBACK_COVENANT(output, contract)
+        return rollback
+
+    // 5) Return validated output
+```
+
+**If your agent can act, this loop is the minimum governance skeleton.**
+
+---
+
 ## What Wingman Is
 
 Wingman is a set of **pressure-tested governance primitives** designed to reduce:
