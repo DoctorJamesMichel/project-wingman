@@ -4,6 +4,10 @@
 **Project Wingman is not an agent framework.**  
 It is a **minimal governance toolkit** designed to be installed into *any* agent stack.
 
+➡️ **Start here (fast install):** [`INSTALL.md`](INSTALL.md)
+
+---
+
 If your system can act, the question is no longer:
 
 > “Is it smart?”
