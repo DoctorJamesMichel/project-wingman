@@ -4,6 +4,9 @@
 
 ### A portable governance layer for agentic AI systems
 
+[![Release](https://img.shields.io/github/v/release/DoctorJamesMichel/project-wingman)](https://github.com/DoctorJamesMichel/project-wingman/releases)
+[![License](https://img.shields.io/github/license/DoctorJamesMichel/project-wingman)](LICENSE)
+
 **Project Wingman is not an agent framework.**  
 It is a **minimal governance toolkit** designed to be installed into *any* agent stack.
 
