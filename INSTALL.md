@@ -13,6 +13,14 @@ This repo exists for one reason:
 
 **Install upstream responsibility before your agent breaks something.**
 
+### If you only do one thing
+
+Install **P-04 Responsibility Handshake**.
+
+It prevents tool escalation from becoming silent catastrophe.
+
+→ /primitives/P-04-RESPONSIBILITY-HANDSHAKE.md
+
 ---
 
 ## Install in Under 10 Minutes
