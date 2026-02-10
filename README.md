@@ -19,7 +19,9 @@ Wingman exists because autonomous execution without governance is not automation
 
 ---
 
-## Fork & Install in 5 Minutes
+## Fork & Install in 5 Minutes  
+
+➡️ **Start here (fast install):** [`INSTALL.md`](INSTALL.md)  
 
 ➡️ **Start here (copy/paste install):** [`/docs/INSTALL_WINGMAN.md`](docs/INSTALL_WINGMAN.md)  
 
