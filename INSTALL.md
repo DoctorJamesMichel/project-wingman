@@ -11,11 +11,18 @@ Wingman is a portable governance layer designed to reduce:
 
 This repo exists for one reason:
 
-**Install upstream responsibility before your agent breaks something.**
+**Install upstream responsibility before your agent breaks something.**  
 
-### If you only do one thing
+```bash
+git clone https://github.com/DoctorJamesMichel/project-wingman.git  
+cd project-wingman  
+open INSTALL.md
+```
+You are now 10 seconds from installing upstream responsibility.
 
-Install **P-04 Responsibility Handshake**.
+### If you only do one thing  
+
+Install **P-04 Responsibility Handshake**.  
 
 It prevents tool escalation from becoming silent catastrophe.
 
