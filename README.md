@@ -1,10 +1,11 @@
-# Project Wingman  
+# Project Wingman
+
+➡️ **INSTALL NOW (copy/paste):** [`INSTALL.md`](INSTALL.md)  
+
 ### A portable governance layer for agentic AI systems
 
 **Project Wingman is not an agent framework.**  
 It is a **minimal governance toolkit** designed to be installed into *any* agent stack.
-
-➡️ **Start here (fast install):** [`INSTALL.md`](INSTALL.md)
 
 ---
 
