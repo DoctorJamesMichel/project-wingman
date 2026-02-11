@@ -259,6 +259,24 @@ Wingman is designed to make drift visible early, recoverable quickly, and accoun
 
 ---
 
+## Why This Matters Now
+
+AI is no longer a software feature problem.  
+It is a governance workforce problem.
+
+When organizations like EC-Council begin issuing role-based certifications for AI governance, security, and operational oversight, it signals a structural shift: compliance departments are waking up, training budgets are about to unlock, and “AI operator” is becoming a real job category.
+
+The next competitive advantage won’t come from smarter models.
+
+It will come from deployable governance primitives—rollback, auditability, responsibility assignment, drift interrupts, and permission discipline.
+
+In other words:
+
+AI governance is becoming an industry.  
+And the governance layer is becoming the product.
+
+---
+
 ## License
 
 See [`LICENSE`](./LICENSE)
