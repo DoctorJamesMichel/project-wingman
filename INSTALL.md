@@ -11,6 +11,15 @@ Wingman is a portable governance layer designed to reduce:
 
 This repo exists for one reason:
 
+---
+
+### Field Note (Read This Once)
+
+The next competitive advantage won’t come from smarter models.  
+It will come from deployable governance primitives.
+
+---
+
 **Install upstream responsibility before your agent breaks something.**  
 
 ```bash
